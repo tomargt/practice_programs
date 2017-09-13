@@ -1,6 +1,1 @@
-i=1
-j=101
-while i < j do
-puts i
-i +=1
-end
+100.times {|num| print "#{num + 1}"}

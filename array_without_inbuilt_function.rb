@@ -20,6 +20,7 @@ class JoinArray
 	end
 
 end
+
 merge = JoinArray.new
 initial = merge.get_input
 final = merge.get_input

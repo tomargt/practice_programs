@@ -1,13 +1,27 @@
-array_one = [1,2,3,4]
-array_two = [5,6,7,8,0]
-added_array = []
-for array_one_element in (0...(array_one.size))
-	added_array[array_one_element] = array_one [array_one_element]
-end 
+class JoinArray
 
-for array_two_element in (0...(array_two.size))
-	added_array[array_one_element+1] = array_two [array_two_element]
-	array_one_element = array_one_element+1
+	def get_input
+		input = []
+		puts "Enter number of characters in array"
+		size = gets.chomp.to_i
+		puts "Enter elements one by one"
+		size.times { input << gets.chomp }
+		input
+	end
+
+	def join (initial , final)
+		result = initial
+		final.each { |element| result << element }
+		result
+	end
+
+	def print (result)
+		puts "Merged array is #{result}"
+	end
+
 end
-
-puts "#{added_array}"
+merge = JoinArray.new
+initial = merge.get_input
+final = merge.get_input
+result = merge.join(initial , final)
+merge.print(result)
